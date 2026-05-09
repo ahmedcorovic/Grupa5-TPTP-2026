@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
+  <defs>
+    <clipPath id="gc">
+      <circle cx="40" cy="40" r="27"/>
+    </clipPath>
+  </defs>
+
+  <!-- Icon background circle -->
+  <circle cx="40" cy="40" r="32" fill="#0d2010"/>
+
+  <!-- Globe grid lines (clipped inside circle) -->
+  <g clip-path="url(#gc)" fill="none" stroke="#1e4a24" stroke-width="1.2">
+    <ellipse cx="40" cy="40" rx="13" ry="27"/>
+    <ellipse cx="40" cy="40" rx="27" ry="10"/>
+    <line x1="13" y1="40" x2="67" y2="40"/>
+  </g>
+
+  <!-- Globe ring -->
+  <circle cx="40" cy="40" r="27" fill="none" stroke="#2a6632" stroke-width="1.2"/>
+
+  <!-- Leaf (partially outside globe, suggesting growth) -->
+  <path d="M 32 58 C 22 46 32 22 64 12 C 70 18 62 44 32 58 Z" fill="#7dcc55"/>
+  <!-- Leaf center vein -->
+  <path d="M 32 58 C 42 46 52 30 64 12" fill="none" stroke="#0d2010" stroke-width="0.9" opacity="0.45"/>
+
+  <!-- Logo text -->
+  <text x="84" y="45" font-family="Raleway, 'Segoe UI', sans-serif" font-size="30" letter-spacing="-0.5">
+    <tspan fill="#7dcc55" font-weight="800">Eco</tspan><tspan fill="#f0ede8" font-weight="300">Watch</tspan>
+  </text>
+  <!-- Tagline -->
+  <text x="87" y="61" font-family="'Source Sans 3', 'Segoe UI', sans-serif" font-size="11" fill="#9eb89a" letter-spacing="0.1em" font-weight="300">EKOLOŠKI PORTAL</text>
+</svg>
