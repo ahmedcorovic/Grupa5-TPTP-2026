@@ -2,19 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+font-family: 'Inter', sans-serif;
 }
 
 :root{
-
     --boja-tekst:  #1a2e1c;
-    --boja-sec: #f5f9f3;
+    --boja-sec: #effce9;
     --boja-border:#d4e8d0;
-
-
-
+    --boja-cont:#e0f8e2;
 }
-
 
 header{
     display: flex;
@@ -23,7 +19,6 @@ header{
     padding: 1rem 4rem;
     background-color: var(--boja-sec) ;
     border-bottom: 1px solid  var(--boja-border);
-
 }
 
 nav{
@@ -31,8 +26,6 @@ nav{
     gap: 2rem;
     align-items: center;
     text-align: center;
-
-
 }
 nav li{
     list-style: none;
@@ -40,13 +33,15 @@ nav li{
 }
 nav li a{
     text-decoration: none;
-    font-size: 21px;
+    font-size: 18px;
     color:  var(--boja-tekst);
     margin: 0;
-
+}
+nav li a .fa-brands, a .fa-regular{
+    font-size: 25px;
 }
 nav li a.active{
-    background-color: var(--boja-border) ;
+    background-color: var(--boja-cont) ;
      color: var(--boja-tekst); 
 }
 nav  .nav_links{
@@ -58,8 +53,8 @@ nav  .nav_links{
 }
 
 nav .nav_links:hover{
-    background-color: var(--boja-border) ;
-     color: var(--boja-tekst);
+    background-color: var(--boja-cont) ;
+    color: var(--boja-tekst);
 }
 
 footer{
@@ -67,23 +62,91 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
- background-color: var(--boja-tekst);
- height: 50px;
- color:  var(--boja-border);
- 
-
-
+    background-color: var(--boja-tekst);
+    height: 50px;
+    color:  var(--boja-border);
 }
 
 footer a{
     font-size: 20px;
     color: var(--boja-sec);
 }
+footer p{
+    font-size: 16px;
+    color: var(--boja-sec);
+}
 
+ .landing_page{
+  background-color: var(--boja-sec);
+  height: auto;
+    padding: 1% 3%;
+ }
 
+.landing_content{  
+    width: 50%;
+    height: auto;
+    color: var(--boja-tekst);
+    padding: 5% 0 ;
+}
+.landing_content h1, p{
+    color: var(--boja-tekst);
+}
+.landing_content h1{
+    font-size: 5rem;
+}
+.landing_content .p1{
+    display: inline-block;
+    font-size: 15px;
+    padding: 4px 10px;
+    border-radius: 20px;
+   background-color: var(--boja-cont); 
+   border: 2px solid var(--boja-border);   
+   
+}
+.landing_content .p2{
+    font-size: 24px;
+    margin-top: 10px;
+}
 
+.statistika{
+    width: 25%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.stat_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 30%;
+   padding: 10px 0;
+   border-radius: 20px;
+   background-color: var(--boja-cont);
+   border: 2px solid var(--boja-border);
+   box-shadow:  0 4px 10px  grey;
+   cursor: pointer;
+   transition: 0.2s ease-in all;
+}
+.stat_item:hover{
+    transform: translateY(-10px);
+}
+.stat_item .stat_vr{
+    font-size: 2rem;
+    font-weight:600 ;  
+}
 
+.stat_item .crvena{
+    color: red;
+}
+.stat_item .zelena{
+    color: green;
+}
+.stat_item .zuta{
+    color: rgb(255, 145, 0);
 
-
+}
+.stat_item .stat_opis{
+    font-size: 11px; 
+}
 
 
