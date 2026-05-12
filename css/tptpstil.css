@@ -10,6 +10,7 @@ font-family: 'Inter', sans-serif;
     --boja-sec: #effce9;
     --boja-border:#d4e8d0;
     --boja-cont:#e0f8e2;
+    --boja-kartice:#ffffff;
 }
 
 header{
@@ -79,14 +80,13 @@ footer p{
  .landing_page{
   background-color: var(--boja-sec);
   height: auto;
-    padding: 1% 3%;
+    padding: 5% 3%;
  }
 
 .landing_content{  
     width: 50%;
     height: auto;
     color: var(--boja-tekst);
-    padding: 5% 0 ;
 }
 .landing_content h1, p{
     color: var(--boja-tekst);
@@ -109,6 +109,7 @@ footer p{
 }
 
 .statistika{
+    margin-top: 5%;
     width: 25%;
     display: inline-flex;
     justify-content: space-between;
@@ -147,6 +148,67 @@ footer p{
 }
 .stat_item .stat_opis{
     font-size: 11px; 
+}
+
+main{
+   
+    display: flex;
+    justify-content: space-around;
+}
+
+.teme{
+    border: 1px soli black;
+    width: 70%;
+    padding: 20px 40px;
+    background-color: var(--boja-cont);
+}
+.teme .teme_naslov{
+    font-size: 20px;
+    color: var(--boja-tekst);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    
+}
+.kartice_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.teme .kartice{
+     height: 330px;
+    width: auto;
+    border-radius: 10px;
+    background-color: var(--boja-kartice);
+    color: var(--boja-tekst);
+    display: flex;
+    flex-direction: column;
+}
+
+.kartice .kart_naslov{
+    font-size: 20px;
+    font-weight: 550;
+    margin: 5px 0;
+}
+.kartice .kart_content{
+    padding:  0px 10px;
+}
+.kart_content .vrsta{
+    margin-top: 20px;
+    font-size: 15px;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background-color: var(--boja-cont);
+
+}
+.kart_slika img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 
