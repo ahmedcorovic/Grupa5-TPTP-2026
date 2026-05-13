@@ -11,6 +11,7 @@ font-family: 'Inter', sans-serif;
     --boja-border:#d4e8d0;
     --boja-cont:#e0f8e2;
     --boja-kartice:#ffffff;
+    --boja-naslovi: #5a7a5d;
 }
 
 header{
@@ -153,18 +154,20 @@ footer p{
 main{
    
     display: flex;
-    justify-content: space-around;
+    
+  
 }
 
 .teme{
-    border: 1px soli black;
+    border-top: 1.5px solid var(--boja-border);
     width: 70%;
     padding: 20px 40px;
     background-color: var(--boja-cont);
 }
 .teme .teme_naslov{
     font-size: 20px;
-    color: var(--boja-tekst);
+    color: var(--boja-naslovi);
+    font-weight: 510;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -210,5 +213,62 @@ main{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+.kategorije, .video{
+    background-color: var(--boja-sec);
+    border: 1.5px solid var(--boja-border);
+    width:15%;
+    color: var(--boja-naslovi);
+}
+.kategorije, .video {
+     padding: 20px 30px;
+}
+.kategorije h3, .video h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 5px 0;
+    font-weight: 510;
+}
+.kategorije ul{
+    list-style: none;
+    margin-top: 25px;
+}
+.kategorije li{
+  
 
+}
+.kategorije li a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+    margin: 10px 0;
+     padding: 8px 12px;
+    
+    border-radius: 10px;
+    color: var(--boja-tekst);
+}
+.katergorije ul li .active1{
+    background-color: var(--boja-cont);
+    border-radius: 10px;
+      padding: 8px 12px;
+}
+.icon-sveteme{
+    fill: #2ecc71;
 
+}
+.icon-klima{
+    fill: #e74c3c;
+}
+.icon-oceani{
+    fill: #3498db;
+}
+.icon-sume{
+fill: #27ae60;
+}
+.icon-fauna{
+    fill: #f39c12;
+}
+.icon-zagadjenje{
+    fill: #9b59b6;
+}
