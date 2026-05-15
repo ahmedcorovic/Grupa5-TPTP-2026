@@ -58,7 +58,10 @@ nav .nav_links:hover{
     background-color: var(--boja-cont) ;
     color: var(--boja-tekst);
 }
+nav  .fa-brands:hover, .fa-regular:hover{
+    color: #2a7a36;
 
+}
 footer{
     padding: 10px 60px ;
     display: flex;
@@ -152,10 +155,7 @@ footer p{
 }
 
 main{
-   
     display: flex;
-    
-  
 }
 
 .teme{
@@ -178,9 +178,11 @@ main{
     grid-template-columns: repeat(3,1fr);
     gap: 15px;
 }
-
+.hidden {
+    display: none !important;
+}
 .teme .kartice{
-     height: 330px;
+     height:100%;
     width: auto;
     border-radius: 10px;
     background-color: var(--boja-kartice);
@@ -192,19 +194,19 @@ main{
 .kartice .kart_naslov{
     font-size: 20px;
     font-weight: 550;
-    margin: 5px 0;
+    margin: 5px 0;    
 }
 .kartice .kart_content{
-    padding:  0px 10px;
+    padding: 0 10px;
 }
+
 .kart_content .vrsta{
-    margin-top: 20px;
+    margin: 20px 0px;
     font-size: 15px;
     display: inline-block;
     padding: 6px 10px;
     border-radius: 10px;
     background-color: var(--boja-cont);
-
 }
 .kart_slika img{
     width: 100%;
@@ -233,10 +235,7 @@ main{
     list-style: none;
     margin-top: 25px;
 }
-.kategorije li{
-  
 
-}
 .kategorije li a{
     display: inline-flex;
     align-items: center;
@@ -244,14 +243,19 @@ main{
     gap: 15px;
     margin: 10px 0;
      padding: 8px 12px;
-    
+  
     border-radius: 10px;
     color: var(--boja-tekst);
 }
-.katergorije ul li .active1{
+.kategorije  a.active{
     background-color: var(--boja-cont);
     border-radius: 10px;
-      padding: 8px 12px;
+     
+}
+.kategorije a:hover{
+     background-color: var(--boja-cont);
+    border-radius: 10px;
+
 }
 .icon-sveteme{
     fill: #2ecc71;
