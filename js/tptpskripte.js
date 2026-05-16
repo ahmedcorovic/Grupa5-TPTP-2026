@@ -103,4 +103,37 @@ if (localStorage.getItem('mod') === 'tamni') {
     rezultatDiv.innerHTML = poruka;
 }
 
+// KOD ZA LIVE BROJAČ STABALA
+document.addEventListener("DOMContentLoaded", function() {
+    let brojStabala = 0;
+    const brojacElement = document.getElementById("brojac-stabala");
+
+    if (brojacElement) {
+        setInterval(function() {
+            brojStabala++;
+            brojacElement.textContent = brojStabala;
+        }, 2500);
+    }
+});
+
+//da li ste znali kartica//
+const cinjenice = [
+    "Jedno odraslo stablo može proizvesti dovoljno kiseonika za čak četiri osobe dnevno.",
+    "Recikliranjem samo jedne aluminijumske limenke uštedi se dovoljno energije za trosatni rad vašeg televizora.",
+    "Plastičnoj flaši u prirodi je potrebno preko 450 godina da se potpuno razgradi.",
+    "Oko 97% vode na Zemlji je slano, dok je manje od 1% dostupno ljudima kao pitka voda."
+];
+
+let trenutniIndeks = 0;
+
+function promijeniČinjenicu() {
+    const tekstElement = document.getElementById("fact-text");
+    
+    // Prelazimo na sljedeću činjenicu, a ako dođemo do kraja, vraćamo se na nulu (krug)
+    trenutniIndeks = (trenutniIndeks + 1) % cinjenice.length;
+    
+    // Upisujemo novi tekst u karticu
+    tekstElement.textContent = cinjenice[trenutniIndeks];
+}
+
 
