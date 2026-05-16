@@ -11,7 +11,19 @@ font-family: 'Inter', sans-serif;
     --boja-border:#d4e8d0;
     --boja-cont:#e0f8e2;
     --boja-kartice:#ffffff;
-    --boja-naslovi: #5a7a5d;
+    --boja-naslovi:#5a7a5d;
+    --boja-footer: #1a2e1c;
+    --boja-ftekst: #d4e8d0;
+}
+body.tamni-mod {
+  --boja-tekst:#e8f5e4;
+  --boja-sec:#0d1f0f;
+  --boja-border: #2a4a2e;
+  --boja-cont:#0a1a0c;
+  --boja-kartice:#162b19;
+  --boja-naslovi:#9eb89a;
+  --boja-footer: #2a4a2e;
+  --boja-ftekst: #e8f5e4;
 }
 
 header{
@@ -67,18 +79,19 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--boja-tekst);
+    background-color: var(--boja-footer);
     height: 50px;
-    color:  var(--boja-border);
+    color:  var(--boja-ftekst);
 }
 
 footer a{
     font-size: 20px;
-    color: var(--boja-sec);
+    color: var(--boja-ftekst);
 }
 footer p{
     font-size: 16px;
-    color: var(--boja-sec);
+    color: var(--boja-ftekst);
+
 }
 
  .landing_page{
@@ -152,6 +165,7 @@ footer p{
 }
 .stat_item .stat_opis{
     font-size: 11px; 
+    color: var(--boja-tekst);
 }
 
 main{
@@ -221,7 +235,7 @@ main{
     width:15%;
     color: var(--boja-naslovi);
 }
-.kategorije, .video {
+.kategorije{
      padding: 20px 30px;
 }
 .kategorije h3, .video h3{
@@ -276,6 +290,28 @@ fill: #27ae60;
 .icon-zagadjenje{
     fill: #9b59b6;
 }
+.video{
+padding: 0px 15px;
+}
+.video h3{
+    margin: 15px 0px 25px 0px;
+}
+.video  .video_kartica{
+    text-decoration: none;
+}
+.video_wrapper h4{
+    font-size: 16px;
+    margin: 5px 0px;
+}
+.video_wrapper p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
 /* Stilovi za Kalkulator ekološkog otiska */
 .calculator-section {
     max-width: 650px;
