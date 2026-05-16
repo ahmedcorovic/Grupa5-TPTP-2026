@@ -381,7 +381,7 @@ padding: 0px 15px;
     font-size: 18px;
 }
 
-//stil za tabelu//
+/*stil za tabelu*/
 .table-section {
     max-width: 650px;
     margin: 60px auto;
@@ -423,7 +423,7 @@ padding: 0px 15px;
     border-bottom: 1px solid #e0e0e0;
     color: #333;
 }
-//napisano uz pomoc chatGPT-a (od 387-394)//
+/*napisano uz pomoc chatGPT-a (sld 5 linija koda)*/
 .table-section tbody tr:nth-child(even) {
     background-color: #f9f9f9;}
 
@@ -432,9 +432,9 @@ padding: 0px 15px;
     transition: background-color 0.2s ease;
 }
 
-//poboljsanje izgleda//
+/*poboljsanje izgleda*/
 .content-wrapper {
-    max-width: 700px;
+    max-width: 1500px;
     margin: 0 auto 80px auto;
     padding: 0 20px;
 }
@@ -576,10 +576,10 @@ body {
 .flex-layout-container {
     display: flex;
     flex-wrap: wrap;       /* Ako se smanji ekran (npr. mobitel), automatski će skočiti jedno ispod drugog */
-    gap: 30px;             /* Razmak između kartice i kalkulatora */
+    gap: 30px;             
     justify-content: space-between;
     width:100% ;
-    align-items: stretch;  /* Izjednačava visinu obje kartice da budu u savršenoj ravni */
+    align-items: stretch;  
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
@@ -611,7 +611,7 @@ body {
 
 .fact-title {
     color: #e65100;
-    font-size: 22px;
+    font-size: 24px;
     margin: 0 0 15px 0;
     font-weight: 700;
     letter-spacing: -0.3px;
@@ -619,7 +619,7 @@ body {
 
 #fact-text {
     color: #4a4a4a;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.6;
     min-height: 90px;
     display: flex;
@@ -668,4 +668,104 @@ body {
     border-radius: 12px;
     border-left: 5px solid #2e7d32;
     margin: 0;
+}
+/*paragraf*/
+.eko-globalne-zanimljivosti {
+    width: 100% !important;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.eko-zanimljivosti-tekst {
+    color: #444444;
+    font-size: 20px;
+    line-height: 1.75;          
+    text-align: justify;        
+    margin: 0;
+}
+
+/*bb*/
+.eko-savjeti-sekcija {
+    width: 100% !important;
+    max-width: 1200px;
+    margin: 30px auto 50px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.savjeti-glavni-naslov {
+    color: #1b5e20;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+}
+
+.accordion-header {
+    width: 100%;
+    background: #ffffff;
+    padding: 18px 20px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #333333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: #f9fbf9;
+}
+
+.arrow-icon {
+    font-size: 14px;
+    color: #888888;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fafafa;
+    border-top: 0 solid #f0f0f0;
+}
+
+.accordion-content ul {
+    margin: 0;
+    padding: 20px 40px;
+    list-style-type: disc;
+}
+
+.accordion-content li {
+    color: #555555;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.accordion-content li:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-item.active .arrow-icon {
+    transform: rotate(180deg); 
+}
+
+.accordion-item.active .accordion-content {
+    border-top-width: 1px;
 }

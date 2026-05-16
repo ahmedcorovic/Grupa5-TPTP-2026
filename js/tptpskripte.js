@@ -1,5 +1,27 @@
 
-    //kalkulator//
+function toggleAccordion(headerElement) {
+    const trenutniItem = headerElement.parentElement;
+    const trenutniSadrzaj = trenutniItem.querySelector('.accordion-content');
+    const sviItemi = document.querySelectorAll('.accordion-item');
+
+    sviItemi.forEach(item => {
+        if (item !== trenutniItem && item.classList.contains('active')) {
+            item.classList.remove('active');
+            item.querySelector('.accordion-content').style.maxHeight = null;
+        }
+    });
+
+    trenutniItem.classList.toggle('active');
+
+    if (trenutniItem.classList.contains('active')) {
+        trenutniSadrzaj.style.maxHeight = trenutniSadrzaj.scrollHeight + "px";
+    } else {
+        trenutniSadrzaj.style.maxHeight = null;
+    }
+}
+
+
+//kalkulator//
     function izracunajOtisak() {
     const struja = parseFloat(document.getElementById('struja').value) || 0;
     const plin = parseFloat(document.getElementById('plin').value) || 0;
