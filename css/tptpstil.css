@@ -343,3 +343,52 @@ fill: #27ae60;
     text-align: center;
     font-size: 18px;
 }
+
+//stil za tabelu//
+.table-section {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.table-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+
+}
+
+.table-container {
+    overflow-x: auto; /*osigurava da se tabela pravilno prikazuje na manjim ekranima*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table-section th {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.table-section td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+//napisano uz pomoc chatGPT-a (od 387-394)//
+.table-section tbody tr:nth-child(even) {
+    background-color: #f9f9f9;}
+
+.table-section tbody tr:hover {
+    background-color: #f1f8e9;
+    transition: background-color 0.2s ease;
+}
