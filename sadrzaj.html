@@ -24,13 +24,19 @@
     </header>
 
     <main style="display: block; width: 100%;">
-        <section class="page-intro">
-        <h1>Interaktivni Alati</h1>
-        <p>Izmjerite svoj utjecaj i saznajte kako male promjene u svakodnevici stvaraju veliku razliku za našu planetu.</p>
+        <section class="page-intro" style="text-align:center; margin-top: 30px; margin-bottom: 30px;">
+        <h1 style="font-size: 32px; color: #1b5e20; font-weight: 700; margin-bottom: 10px;">Interaktivni Alati</h1>
+        <p style="color: #555; font-size: 16px; max-width: 600px; margin: 0 auto; line-height: 1.6;">Izmjerite svoj utjecaj i saznajte kako male promjene u svakodnevici stvaraju veliku razliku za našu planetu.</p>
     </section>
     <div class="content-wrapper"></div>
+
+    <div class="aesthetic-quote-container">
+    <blockquote class="aesthetic-quote">
+        "Nije stvar u spašavanju naše planete, stvar je u spašavanju nas samih. Priroda će preživjeti i bez nas, ali mi ne možemo bez nje."
+    </blockquote >
+    <cite class="quote-author">— Sir David Attenborough</cite>
+</div>
     <div class="live-tree-counter">
-    
     <div class="counter-icon-wrapper">
         <i class="fa-solid fa-tree"></i>
     </div>
@@ -45,7 +51,22 @@
         Uživo ažuriranje (svake 2.5 sekunde)
     </p>
 </div>
-
+<div class="fun-fact-card" onclick="promijeniČinjenicu()">
+    
+    <div class="fact-icon-wrapper">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+    
+    <h2 class="fact-title">Da li ste znali?</h2>
+    
+    <p id="fact-text">
+        Jedno odraslo stablo može proizvesti dovoljno kiseonika za čak četiri osobe dnevno.
+    </p>
+    
+    <p class="fact-hint">
+        <i class="fa-solid fa-hand-pointer"></i> Kliknite za novu zanimljivost
+    </p>
+</div>
         <section class="calculator-section">
             <h2><i class="fa-solid fa-leaf"></i>Kalkulator karbonskog otiska</h2>
             <p class="section-description">Izračunaj svoj mjesečni utjecaj na životnu sredinu u kilogramima CO₂</p>

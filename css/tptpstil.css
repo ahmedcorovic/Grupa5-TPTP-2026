@@ -403,6 +403,16 @@ fill: #27ae60;
     padding: 0 20px;
 }
 
+body {
+
+    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+}
+
 /*stil brojaca*/
 .live-tree-counter {
     max-width: 400px;
@@ -473,4 +483,41 @@ fill: #27ae60;
     display: inline-block;
     margin-right: 5px;
     vertical-align: middle;
+}
+
+/*quote*/
+.aesthetic-quote-container {
+    max-width: 800px;
+    margin: 80px auto 40px auto; 
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.aesthetic-quote {
+    font-family: 'Georgia', serif; 
+    font-size: 26px;
+    font-weight: 300; 
+    line-height: 1.6;
+    color: rgba(27, 94, 32, 0.35); 
+    letter-spacing: 0.5px;
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+.quote-author {
+    font-family: sans-serif;
+    font-size: 13px;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: rgba(0, 0, 0, 0.3); 
+    font-style: normal;
+    display: block;
+}
+
+/*da li ste znali kartica*/
+.fun-fact-card:hover {
+    transform: translateY(-5px);
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
 }
