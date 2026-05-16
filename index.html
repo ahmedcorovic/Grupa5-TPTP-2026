@@ -19,7 +19,6 @@
         <li><a href="" class="nav_links active" >Početna</a></li>
         <li><a href="sadrzaj.html" class="nav_links">Sadržaj</a></li>
         <li><a href="kontakt.html" class="nav_links">Kontakt</a></li>
-        <li><a href="kalkulator.html" class="nav_links">Kalkulator</a></li>
         <li><a href=""><i class="fa-brands fa-github"></i></a></li>
         <li><a href=""><i class="fa-regular fa-moon"></i></a></li>
       </nav>
@@ -56,48 +55,49 @@
         <h3>Kategorije</h3>
     <ul>
         <li>
-            <a class="active1" href="">
-            <svg class="icon icon-sveteme" widht="10" height="10" viewBox="0 0 10 10">
+            
+            <a class="filter-btn active" href="#" data-filter="sve">
+            <svg class="icon icon-sveteme" width="10" height="10" viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5"/>
             </svg>
             Sve teme
             </a>
         </li>
         <li>
-            <a class="" href="">
-             <svg class="icon icon-klima" widht="10" height="10" viewBox="0 0 10 10">
+            <a class="filter-btn" href="#" data-filter="klima">
+             <svg class="icon icon-klima" width="10" height="10" viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5"/>
             </svg>
             Klima
             </a>
         </li>
         <li>
-            <a class="" href="">
-             <svg class="icon icon-oceani" widht="10" height="10" viewBox="0 0 10 10">
+            <a class="filter-btn" href="#" data-filter="vode">
+             <svg class="icon icon-oceani" width="10" height="10" viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5"/>
             </svg>
-            Oceani
+            Vode
             </a>
         </li>
         <li>
-            <a class="" href="">
-             <svg class="icon icon-sume" widht="10" height="10" viewBox="0 0 10 10">
+            <a class="filter-btn" href="#" data-filter="sume">
+             <svg class="icon icon-sume" width="10" height="10" viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5"/>
             </svg>
             Šume
             </a>
         </li>
         <li>
-            <a class="" href=""> 
-            <svg class="icon icon-fauna" widht="10" height="10" viewBox="0 0 10 10">
+            <a class="filter-btn" href="#" data-filter="fauna"> 
+            <svg class="icon icon-fauna" width="10" height="10" viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5"/>
             </svg>
             Fauna
             </a>
         </li>
         <li>
-            <a class="" href="">
-             <svg class="icon icon-zagadjenje" widht="10" height="10" viewBox="0 0 10 10">
+            <a class="filter-btn" href="#" data-filter="zagadjenje">
+             <svg class="icon icon-zagadjenje" width="10" height="10" viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5"/>
             </svg>
             Zagađenje
@@ -110,7 +110,7 @@
 <!-- Sekcija za main kontent-->
         <h2 class="teme_naslov">Aktualne teme</h2>
         <div class="kartice_wrapper">
-          <article class="kartice">
+          <article class="kartice" data-category="zagadjenje">
                 <div class="kart_slika">
                     <img src="images/termoelektrana.jpg" alt="">
                 </div>
@@ -121,83 +121,114 @@
                 </div>
           </article>
 
-          <article class="kartice">
+          <article class="kartice" data-category="vode">
                 <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
+                    <img src="images/neretvica.jpg" alt="">
                 </div>
             <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
+                   <h2 class="kart_naslov">Zaštita rijeke Neretvice</h2>
+                   <p class="kart_opis">Borba lokalnih zajednica protiv projekata koji ugrožavaju riječne ekosisteme i pitku vodu.</p>
+                   <p class="vrsta">Vode</p>
+                </div>
+          </article>
+          <article class="kartice" data-category="vode zagadjenje" >
+                <div class="kart_slika">
+                    <img src="images/drina.jpg" alt="">
+                </div>
+            <div class="kart_content">
+                   <h2 class="kart_naslov">Divlje deponije uz obale rijeke Drine</h2>
+                   <p class="kart_opis">Hiljade tona plutajućeg otpada ugrožavaju biodiverzitet i rad hidroelektrana na istoku zemlje.</p>
+                   <p class="vrsta">Zagađenje</p>
+                   <p class="vrsta">Vode</p>
+                </div>
+          </article>
+          <article class="kartice" data-category="sume">
+                <div class="kart_slika">
+                    <img src="images/perucica.jpg" alt="">
+                </div>
+            <div class="kart_content">
+                   <h2 class="kart_naslov">Zaštita prašume Perućica</h2>
+                   <p class="kart_opis">Očuvanje jedne od posljednjih prašuma u Evropi unutar Nacionalnog parka Sutjeska.</p>
+                   <p class="vrsta">Šume</p>
+                </div>
+          </article>
+          <article class="kartice" data-category="fauna">
+                <div class="kart_slika">
+                    <img src="images/balkanski_ris.jpg" alt="">
+                </div>
+            <div class="kart_content">
+                   <h2 class="kart_naslov">Povratak balkanskog risa</h2>
+                   <p class="kart_opis">Rijetki snimci potvrđuju prisustvo ove ugrožene vrste u planinskim predjelima BiH.</p>
+                   <p class="vrsta">Fauna</p>
+                </div>
+          </article>
+          <article class="kartice" data-category="klima">
+                <div class="kart_slika">
+                    <img src="images/bjelasnica.jpg" alt="">
+                </div>
+            <div class="kart_content">
+                   <h2 class="kart_naslov">Klimatske promjene na Bjelašnici</h2>
+                   <p class="kart_opis">Klimatske promjene skraćuju skijašku sezonu i mijenja floru na olimpijskim planinama.</p>
+                   <p class="vrsta">Klima</p>
+                </div>
+          </article>
+          <article class="kartice" data-category="zagadjenje">
+                <div class="kart_slika">
+                    <img src="images/nuklearni_otpad.jpg" alt="">
+                </div>
+            <div class="kart_content">
+                   <h2 class="kart_naslov">Problem odlaganja nuklearnog otpada</h2>
+                   <p class="kart_opis">Potencijalna izgradnja odlagališta na Trgovskoj gori prijeti slivu rijeke Une.</p>
                    <p class="vrsta">Zagađenje</p>
                 </div>
           </article>
-          <article class="kartice">
+          <article class="kartice" data-category="fauna">
                 <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
+                    <img src="images/covj_ribica.jpg" alt="">
                 </div>
             <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
-                   <p class="vrsta">Zagađenje</p>
+                   <h2 class="kart_naslov">Endemska Čovječija ribica u Vjetrenic</h2>
+                   <p class="kart_opis">Zaštita kraških pećina i podzemnih voda u kojima živi ovaj jedinstveni vodozemac.</p>
+                   <p class="vrsta">Fauna</p>
                 </div>
           </article>
-          <article class="kartice">
+          <article class="kartice" data-category="klima">
                 <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
+                    <img src="images/solarnaelektrana.jpg" alt="">
                 </div>
             <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
-                   <p class="vrsta">Zagađenje</p>
+                   <h2 class="kart_naslov">Solarna energija u Hercegovini</h2>
+                   <p class="kart_opis">Sve veći broj fotonaponskih elektrana u okolini Mostara kao prelaz na čistu energiju.</p>
+                   <p class="vrsta">Klima</p>
                 </div>
           </article>
-          <article class="kartice">
-                <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
-                </div>
-            <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
-                   <p class="vrsta">Zagađenje</p>
-                </div>
-          </article>
-          <article class="kartice">
-                <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
-                </div>
-            <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
-                   <p class="vrsta">Zagađenje</p>
-                </div>
-          </article>
-          <article class="kartice">
-                <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
-                </div>
-            <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
-                   <p class="vrsta">Zagađenje</p>
-                </div>
-          </article>
-          <article class="kartice">
-                <div class="kart_slika">
-                    <img src="images/termoelektrana.jpg" alt="">
-                </div>
-            <div class="kart_content">
-                   <h2 class="kart_naslov">Zagađenje zraka u Tuzli i Sarajevu</h2>
-                   <p class="kart_opis">Tokom zime, nivo PM2.5 čestica u ovim gradovima često premašuje globalne rekorde.</p>
-                   <p class="vrsta">Zagađenje</p>
-                </div>
-          </article>
-          
         </div>
-
     </section>
 
     <aside class="video">
         <h3>Video sekcija</h3>
+
+
+        <div class="video_wrapper">
+    <a href="https://www.youtube.com/watch?v=OicbW7V0_Dk" target="_blank" class="video_kartica">
+      <div class="thumbnail_kontejner">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MClwRfpTG-I?si=SH1Ztp96XK-5SX6i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="play_dugme">▶</div>
+      </div>
+      <h4 class="video_naslov">Plavo srce (Balkan)</h4>
+      <p class="video_opis">Priča o borbi za spas posljednjih divljih rijeka u BiH i na Balkanu.</p>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=3g_vQ_uYhF8" target="_blank" class="video_kartica">
+      <div class="thumbnail_kontejner">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EDikFsdf8mA?si=sRHqagKjjv1nqQ7O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="play_dugme">▶</div>
+      </div>
+      <h4 class="video_naslov">Čuvari bosanskih rijeka</h4>
+      <p class="video_opis">Dokumentarni film o aktivizmu i odbrani prirodnih bogatstava BiH.</p>
+    </a>
+  </div>
+
     </aside>
     
 </main>
@@ -212,7 +243,7 @@
 
 
 
-
+<script src="js/tptpskripte.js"></script>
     
 </body>
 </html>
