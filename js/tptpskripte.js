@@ -103,7 +103,7 @@ if (localStorage.getItem('mod') === 'tamni') {
     rezultatDiv.innerHTML = poruka;
 }
 
-// KOD ZA LIVE BROJAČ STABALA
+//brojac stabala//
 document.addEventListener("DOMContentLoaded", function() {
     let brojStabala = 0;
     const brojacElement = document.getElementById("brojac-stabala");
