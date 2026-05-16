@@ -129,10 +129,9 @@ let trenutniIndeks = 0;
 function promijeniČinjenicu() {
     const tekstElement = document.getElementById("fact-text");
     
-    // Prelazimo na sljedeću činjenicu, a ako dođemo do kraja, vraćamo se na nulu (krug)
+    
     trenutniIndeks = (trenutniIndeks + 1) % cinjenice.length;
     
-    // Upisujemo novi tekst u karticu
     tekstElement.textContent = cinjenice[trenutniIndeks];
 }
 
