@@ -18,14 +18,35 @@
         <li><a href="index.html" class="nav_links" >Početna</a></li>
         <li><a href="sadrzaj.html" class="nav_links active">Sadržaj</a></li>
         <li><a href="kontakt.html" class="nav_links">Kontakt</a></li>
-        <li><a href="kalkulator.html" class="nav_links">Kalkulator</a></li>
+
         <li><a href=""><i class="fa-brands fa-github"></i></a></li>
         <li><a href=""><i class="fa-regular fa-moon"></i></a></li> 
       </nav>
     </header>
 
+    <main>
+        <section class="calculator-section">
+            <h2>Kalkulator karbonskog otiska</h2>
+            <p class="calc-description">Izračunaj svoj mjesečni utjecaj na životnu sredinu u kilogramima CO₂</p>
+            <form id="eco-calc-form">
+                <div class="form-group">
+                    <label for="struja"><i class="fa-solid fa-bolt"></i> Potrošnja struje (kWh/mjesečno):</label>
+                    <input type="number" id="struja" placeholder="300" min="0" required> 
+                </div>
+                 <div class="form-group">
+                    <label for="plin"><i class="fa-solid fa-bolt"></i> Potrošnja plina (m³/mjesečno):</label>
+                    <input type="number" id="plin" placeholder="50" min="0" required> 
+                    </div>
 
-
+                    <div class="form-group">
+                    <label for="auto"><i class="fa-solid fa-bolt"></i> Pređeni kilometri autom (km/mjesečno):</label>
+                    <input type="number" id="auto" placeholder="500" min="0" required>
+                    </div>
+                    <button type="button" class="btn-calc" onclick="izracunajOtisak()">Izračunaj</button>
+            </form>
+            <div id="rezultat"></div>
+        </section>
+    </main>
 
     <footer>
         <p>
@@ -35,7 +56,7 @@
             <a href=""><i class="fa-brands fa-github"></i></a>
     </footer>
 
-
+<script src="js/kalkulator.js"></script>
 
 
     
