@@ -278,13 +278,14 @@ fill: #27ae60;
 }
 /* Stilovi za Kalkulator ekološkog otiska */
 .calculator-section {
-    max-width: 600px;
+    max-width: 650px;
     margin: 40px auto;
     padding: 25px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 .calculator-section h2 {
@@ -346,9 +347,10 @@ fill: #27ae60;
 
 //stil za tabelu//
 .table-section {
-    max-width: 700px;
+    max-width: 650px;
     margin: 60px auto;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .table-description {
@@ -359,6 +361,7 @@ fill: #27ae60;
 }
 
 .table-container {
+    width:100%;
     overflow-x: auto; /*osigurava da se tabela pravilno prikazuje na manjim ekranima*/
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
@@ -369,8 +372,8 @@ fill: #27ae60;
     border-collapse: collapse;
     background: #ffffff;
     text-align: left;
-    border-radius: 10px;
-    overflow: hidden;
+    
+    
 }
 .table-section th {
     background-color: #2e7d32;
@@ -391,4 +394,83 @@ fill: #27ae60;
 .table-section tbody tr:hover {
     background-color: #f1f8e9;
     transition: background-color 0.2s ease;
+}
+
+//poboljsanje izgleda//
+.content-wrapper {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+/*stil brojaca*/
+.live-tree-counter {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.counter-icon-wrapper {
+    background-color: #e8f5e9;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+}
+
+.counter-icon-wrapper i {
+    font-size: 35px;
+    color: #2e7d32;
+}
+
+.counter-title {
+    color: #2e7d32;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.counter-description {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+#brojac-stabala {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1b5e20;
+    font-family: monospace;
+    background: #f1f8e9;
+    padding: 10px 30px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    display: inline-block;
+    min-width: 120px;
+}
+
+.counter-status {
+    color: #999;
+    font-size: 12px;
+    margin: 15px 0 0 0;
+}
+
+.live-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #c62828;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
 }

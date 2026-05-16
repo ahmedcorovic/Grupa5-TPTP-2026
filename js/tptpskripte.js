@@ -73,4 +73,17 @@ document.addEventListener("DOMContentLoaded", function(){
     rezultatDiv.innerHTML = poruka;
 }
 
+// KOD ZA LIVE BROJAČ STABALA
+document.addEventListener("DOMContentLoaded", function() {
+    let brojStabala = 0;
+    const brojacElement = document.getElementById("brojac-stabala");
+
+    if (brojacElement) {
+        setInterval(function() {
+            brojStabala++;
+            brojacElement.textContent = brojStabala;
+        }, 2500);
+    }
+});
+
 
