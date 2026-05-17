@@ -12,9 +12,31 @@ font-family: 'Inter', sans-serif;
     --boja-cont:#e0f8e2;
     --boja-kartice:#ffffff;
     --boja-naslovi:#5a7a5d;
+<<<<<<< HEAD
     --boja-footer:#1a2e1c;
     --boja-ftekst:#d4e8d0;
     --boja-zelena:#2a7a36;
+=======
+    --boja-footer: #1a2e1c;
+    --boja-ftekst: #d4e8d0;
+
+    --boja-primarna: #1b5e20;
+    --boja-sekundarna: #2a7a36;
+    --boja-akcent: #2e7d32;
+    --boja-struja: #fbc02d;
+    --boja-plin: #ff9800;
+    --boja-vode: #29b6f6;
+    --boja-auto: #66bb6a;
+    --boja-tekst-glavni: #333333;
+    --boja-tekst-opis: #555555;
+    --boja-pozadina-svjetla: #ffffff;
+    --boja-granica: #f0f0f0;
+    --boja-tacka: #e74c3c;
+    --razmak-ikona: 10px;
+
+    --pozadina-stranice: linear-gradient(180deg, #effce9 0%, #ffffff 100%);
+    
+>>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
 }
 body.tamni-mod {
   --boja-tekst:#e8f5e4;
@@ -23,9 +45,31 @@ body.tamni-mod {
   --boja-cont:#0a1a0c;
   --boja-kartice:#162b19;
   --boja-naslovi:#9eb89a;
+<<<<<<< HEAD
   --boja-footer:#2a4a2e;
   --boja-ftekst:#e8f5e4;
   --boja-zelena:#7dcc55;
+=======
+  --boja-footer: #2a4a2e;
+  --boja-ftekst: #e8f5e4;
+
+  --boja-primarna: #0a1f0d;
+    --boja-sekundarna: #113818;
+    --boja-akcent: #388e3c;
+    --boja-tekst-glavni: #e2f0e9;
+    --boja-tekst-opis: #a3b8ad;
+    --boja-pozadina-svjetla: #121d16;
+    --boja-granica: #1f3326;
+    --boja-tacka: #ff6b6b;
+
+    --boja-struja: #fdd835;          
+    --boja-plin: #fb8c00;             
+    --boja-vode: #4fc3f7;             
+    --boja-auto: #81c784;
+
+    --pozadina-stranice: linear-gradient(180deg, #132416 0%, #050805 100%);
+    
+>>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
 }
 /* TAMNI MOD DRUGI NACIN, UGASEN ZBOG POSTOJANJA JAVASCRIPTE KOJA RADI ISTO
    @media (prefers-color-scheme: dark) {
@@ -432,7 +476,20 @@ padding: 0px 15px;
     font-size: 15px;
     margin-bottom: 20px;
 }
+/*SADRZAJ*/
+/* Stilovi za kalkulator ekološkog otiska */
+body{
+    background: var(--pozadina-stranice) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--boja-tekst-glavni);
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
+<<<<<<< HEAD
 @media (min-width:1025px) and (max-width:1440px){
  
 
@@ -966,26 +1023,29 @@ main{
 
 
 /* Stilovi za Kalkulator ekološkog otiska */
+=======
+>>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
 .calculator-section {
     max-width: 650px;
     margin: 40px;
     padding: 25px;
-    background: #f9f9f9;
+    background: var(--boja-kartice);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     font-family: sans-serif;
     box-sizing: border-box;
+    border: 1px solid var(--boja-granica);
 }
 
 .calculator-section h2 {
-    color: #2e7d32;
+    color: var(--boja-akcent);
     margin-bottom: 10px;
     text-align: center;
 }
 
 .calc-description {
     text-align: center;
-    color: #666;
+    color: var(--boja-teksta-sekundarna);
     margin-bottom: 20px;
 }
 
@@ -997,21 +1057,23 @@ main{
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #333;
+    color: var(--boja-tekst);
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--boja-border);
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: var(--boja-sec);
+    color: var(--boja-tekst);
 }
 
 .btn-calc {
     width: 100%;
     padding: 12px;
-    background-color: #2e7d32;
+    background-color: var(--boja-akcent);
     color: white;
     border: none;
     border-radius: 5px;
@@ -1021,13 +1083,15 @@ main{
 }
 
 .btn-calc:hover {
-    background-color: #1b5e20;
+    background-color: var(--boja-primarna);
 }
 
 #rezultat {
     margin-top: 20px;
     padding: 15px;
-    border-left: 5px solid #2e7d32;
+    border-left: 5px solid var(--boja-akcent);
+    background-color: var(--boja-sec);
+    color: var(--boja-tekst);
     border-radius: 4px;
     display: none;
     text-align: center;
@@ -1044,7 +1108,7 @@ main{
 
 .table-description {
     text-align: center;
-    color: #666;
+    color: var(--boja-tekst-opis);
     margin-bottom: 25px;
 
 }
@@ -1059,13 +1123,13 @@ main{
 .table-section table {
     width: 100%;
     border-collapse: collapse;
-    background: #ffffff;
+    background: var(--boja-pozadine-svjetla);
     text-align: left;
     
     
 }
 .table-section th {
-    background-color: #2e7d32;
+    background-color: var(--boja-akcent);
     color: white;
     padding: 15px;
     font-weight: bold;
@@ -1073,15 +1137,15 @@ main{
 
 .table-section td {
     padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    color: #333;
+    border-bottom: 1px solid var(--boja-border);
+    color: var(--boja-tekst-glavni);
 }
 /*napisano uz pomoc chatGPT-a (sld 5 linija koda)*/
 .table-section tbody tr:nth-child(even) {
-    background-color: #f9f9f9;}
+    background-color: var(--boja-sec);}
 
 .table-section tbody tr:hover {
-    background-color: #f1f8e9;
+    background-color: var(--boja-sekundarna);
     transition: background-color 0.2s ease;
 }
 
@@ -1104,48 +1168,40 @@ main{
 
 .intro-naslov {
     font-size: 32px;
-    color: #1b5e20;
+    color: var(--boja-naslovi);
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .intro-paragraf {
-    color: #555;
+    color: var(--boja-tekst-opis);
     font-size: 16px;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
-body {
 
-    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif; 
-}
 
 .globalni-kod-ikona {
-    margin-right: 10px;
-    color: #2e7d32;
+    margin-right: var(--razmak-ikona);
+    color: var(--boja-akcent);
 }
 /*stil brojaca*/
 .live-tree-counter {
     max-width: 400px;
     margin: 30px auto;
-    background: #ffffff;
+    background: var(--boja-kartice) !important;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f0f0f0;
+    border: 1px solid var(--boja-border);
     text-align: center;
     box-sizing: border-box;
 }
 
 .counter-icon-wrapper {
-    background-color: #e8f5e9;
+    background-color: var(--boja-sec);
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -1157,18 +1213,18 @@ body {
 
 .counter-icon-wrapper i {
     font-size: 35px;
-    color: #2e7d32;
+    color: var(--boja-akcent);
 }
 
 .counter-title {
-    color: #2e7d32;
+    color: var(--boja-naslovi);
     font-size: 20px;
     margin: 0 0 10px 0;
     font-weight: 700;
 }
 
 .counter-description {
-    color: #666;
+    color: var(--boja-tekst-opis);
     font-size: 14px;
     margin: 0 0 20px 0;
     line-height: 1.5;
@@ -1177,18 +1233,20 @@ body {
 #brojac-stabala {
     font-size: 48px;
     font-weight: 800;
-    color: #1b5e20;
+    color: var(--boja-akcent);
     font-family: monospace;
-    background: #f1f8e9;
+    background: var(--boja-sec);
     padding: 10px 30px;
     border-radius: 12px;
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
     display: inline-block;
     min-width: 120px;
+    transition: background 0.3s ease;
 }
 
 .counter-status {
-    color: #999;
+    color: var(--boja-tekst-opis);
+    opacity: 0.8;
     font-size: 12px;
     margin: 15px 0 0 0;
 }
@@ -1196,7 +1254,7 @@ body {
 .live-dot {
     height: 8px;
     width: 8px;
-    background-color: #c62828;
+    background-color: var(--boja-akcent);
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
@@ -1217,7 +1275,7 @@ body {
     font-size: 26px;
     font-weight: 300; 
     line-height: 1.6;
-    color: rgba(27, 94, 32, 0.35); 
+    color: var(--boja-naslovi); 
     letter-spacing: 0.5px;
     margin: 0 0 15px 0;
     font-style: italic;
@@ -1228,7 +1286,7 @@ body {
     font-size: 13px;
     text-transform: uppercase; 
     letter-spacing: 2px; 
-    color: rgba(0, 0, 0, 0.3); 
+    color: var(--boja-tekst-opis); 
     font-style: normal;
     display: block;
 }
@@ -1239,14 +1297,13 @@ body {
     min-width:300;
     max-width: 450px;
     margin: 20px auto;
-    background: #ffffff;
+    background: var(--boja-kartice);
     padding: 35px;
-    background: linear-gradient(135deg, #fffaf0 0%, #ffffff 100%);
     border-radius: 20px;
     transform: translateY(-5px);
     box-sizing: border-box;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(255, 152, 0, 0.15);
+    border: 1px solid var(--boja-border);
     text-align: center;
     cursor: pointer;
     display: flex;
@@ -1271,11 +1328,11 @@ body {
 .fun-fact-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 40px rgba(255, 152, 0, 0.08);
-    border-color: rgba(255, 152, 0, 0.3);
+    border-color: var(--boja-akcent);
 }
 
 .fact-icon-wrapper{
-    background-color: #fff3e0;
+    background-color: var(--boja-sec);
     width: 65px;
     height: 65px;
     border-radius: 50%;
@@ -1288,11 +1345,11 @@ body {
 
 .fact-icon-wrapper i {
     font-size: 28px;
-    color: #ff9800;
+    color: var(--boja-akcent);
 }
 
 .fact-title {
-    color: #e65100;
+    color: var(--boja-naslovi);
     font-size: 24px;
     margin: 0 0 15px 0;
     font-weight: 700;
@@ -1300,7 +1357,7 @@ body {
 }
 
 #fact-text {
-    color: #4a4a4a;
+    color: var(--boja-tekst-glavni);
     font-size: 20px;
     line-height: 1.6;
     min-height: 90px;
@@ -1310,7 +1367,7 @@ body {
     margin: 0 0 20px 0;
 }
 .fact-hint {
-    color: #baaf9e;
+    color: var(--boja-tekst-opis);
     font-size: 12px;
     margin: 0;
     font-weight: 500;
@@ -1327,28 +1384,29 @@ body {
     padding: 0 25px;
     text-align: justify; 
     box-sizing: border-box;
+    color: var(--boja-tekst-glavni);
 }
 .eko-naslov {
-    color: #1b5e20;
+    color: var(--boja-naslovi);
     font-size: 32px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
 }
 .eko-paragraf-glavni {
-    color: #444444;
+    color: var(--boja-tekst-glavni);
     font-size: 20px;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 .eko-paragraf-istaknuto {
-    color: #333333;
+    color: var(--boja-tekst-glavni);
     font-size: 20px;
     line-height: 1.7;
-    background-color: #f1f8e9;
+    background-color: var(--boja-sec);
     padding: 20px 25px;
     border-radius: 12px;
-    border-left: 5px solid #2e7d32;
+    border-left: 5px solid var(--boja-akcent);
     margin: 0;
 }
 /*paragraf*/
@@ -1358,34 +1416,36 @@ body {
     margin: 50px auto;
     padding: 0 20px;
     box-sizing: border-box;
+    color: var(--boja-tekst-glavni);
 }
 .eko-zanimljivosti-tekst {
-    color: #444444;
+    color: var(--boja-tekst-glavni);
     font-size: 20px;
     line-height: 1.75;          
     text-align: justify;        
     margin: 0;
 }
 
-/*bb*/
+/*accordion*/
 .eko-savjeti-sekcija {
     width: 100% !important;
     max-width: 1200px;
     margin: 30px auto 50px auto;
     padding: 0 20px;
     box-sizing: border-box;
+
 }
 
 .savjeti-glavni-naslov {
-    color: #1b5e20;
+    color: var(--boja-naslovi);
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .accordion-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
+    background: var(--boja-kartice);
+    border: 1px solid var(--boja-border);
     border-radius: 10px;
     margin-bottom: 12px;
     overflow: hidden;
@@ -1394,14 +1454,14 @@ body {
 
 .accordion-header {
     width: 100%;
-    background: #ffffff;
+    background: var(--boja-kartice);
     padding: 18px 20px;
     border: none;
     outline: none;
     text-align: left;
     font-size: 15.5px;
     font-weight: 600;
-    color: #333333;
+    color: var(--boja-tekst-glavni);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -1410,12 +1470,12 @@ body {
 }
 
 .accordion-header:hover {
-    background-color: #f9fbf9;
+    background-color: var(--boja-sec);
 }
 
 .arrow-icon {
     font-size: 14px;
-    color: #888888;
+    color: var(--boja-tekst-opis);
     transition: transform 0.3s ease;
 }
 
@@ -1423,8 +1483,8 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #fafafa;
-    border-top: 0 solid #f0f0f0;
+    background-color: var(--boja-pozadina-svjetla);
+    
 }
 
 .accordion-content ul {
@@ -1434,7 +1494,7 @@ body {
 }
 
 .accordion-content li {
-    color: #555555;
+    color: var(--boja-tekst-glavni);
     font-size: 14.5px;
     line-height: 1.6;
     margin-bottom: 10px;
@@ -1469,4 +1529,12 @@ body {
 .live-dot {
     display: inline-block;
     animation: pulsiranje 2s infinite ease-in-out;
+    height: 8px;
+    width: 8px;
+    background-color: var(--boja-tacka);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+
 }

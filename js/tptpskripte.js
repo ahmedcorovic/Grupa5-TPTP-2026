@@ -63,6 +63,11 @@ function toggleAccordion(headerElement) {
 }
 
 //brojac stabala//
+/* Napomena o AI upotrebi: 
+   Sledeća funkcija za simulaciju brojača kreirana je uz pomoć AI asistenta 
+   kako bi se postiglo optimalno osvežavanje ekrana na svakih 2.5 sekunde.
+*/
+
 document.addEventListener("DOMContentLoaded", function() {
     let brojStabala = 0;
     const brojacElement = document.getElementById("brojac-stabala");
@@ -95,6 +100,7 @@ function promijeniČinjenicu() {
 }
 
 
+<<<<<<< HEAD
 
 
 
@@ -140,6 +146,8 @@ nav.querySelectorAll('a').forEach(link => {
 
 
 
+=======
+>>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
 // FILTRIRANJE KARTICA//
 document.addEventListener("DOMContentLoaded", function(){
     const filterButtons = document.querySelectorAll(".filter-btn");
