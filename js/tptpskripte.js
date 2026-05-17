@@ -212,57 +212,75 @@ nazadBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 // JAVA ZA KONTAKT FORMU
-if (forma) {
-    // Svi selektori moraju biti unutra da ne prave grešku na drugim stranicama
-    const ime = document.getElementById('ime');
-    const prezime = document.getElementById('prezime');
-    const email = document.getElementById('email');
-    const telefon = document.getElementById('telefon');
-    const tema = document.getElementById('tema');
-    const poruka = document.getElementById('poruka');
-    const porukaUspjeh = document.getElementById('poruka-uspjeh');
-    const uspjehNaslov = document.getElementById('uspjeh-naslov');
-    const btnReset = document.getElementById('btnReset');
+const forma = document.getElementById('kontaktForma');
+const btnReset = document.getElementById('btnReset');
+const porukaUspjeh = document.getElementById('poruka-uspjeh');
+const uspjehNaslov = document.getElementById('uspjeh-naslov');
 
-    // --- SLUŠAČ ZA SUBMIT FORME ---
-    forma.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const jeFormaValidna = validirajFormu();
-        
-        if (jeFormaValidna) {
-            ocistiSveGreske();
-            uspjehNaslov.textContent = `Hvala Vam, ${ime.value.trim()}!`;
-            porukaUspjeh.classList.remove('hidden');
-            forma.reset();
-            porukaUspjeh.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    });
 
-    // --- SLUŠAČ ZA RESET DUGME ---
-    btnReset.addEventListener('click', function() {
-        forma.reset();
+const ime = document.getElementById('ime');
+const prezime = document.getElementById('prezime');
+const email = document.getElementById('email');
+const telefon = document.getElementById('telefon');
+const tema = document.getElementById('tema');
+const poruka = document.getElementById('poruka');
+
+// --- SLUŠAČ ZA SUBMIT FORME ---
+forma.addEventListener('submit', function(e) {
+   
+    e.preventDefault();
+    
+   
+    const jeFormaValidna = validirajFormu();
+    
+    if (jeFormaValidna) {
+        
         ocistiSveGreske();
-        porukaUspjeh.classList.add('hidden');
-    });
+        
+        
+        uspjehNaslov.textContent = `Hvala Vam, ${ime.value.trim()}!`;
+        porukaUspjeh.classList.remove('hidden');
+        
+       
+        forma.reset();
+        
+        porukaUspjeh.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+});
 
-    function validirajFormu() {
-        let validno = true;
-        
-        if (ime.value.trim() === '') {
-            prikaziGresku(ime, 'Ime je obavezno polje.');
-            validno = false;
-        } else {
-            ukloniGresku(ime);
-        }
-        
-        if (prezime.value.trim() === '') {
-            prikaziGresku(prezime, 'Prezime je obavezno polje.');
-            validno = false;
-        } else {
-            ukloniGresku(prezime);
-        }
-         
+// --- SLUŠAČ ZA RESET DUGME ---
+btnReset.addEventListener('click', function() {
+    
+    forma.reset();
+    
+   
+    ocistiSveGreske();
+    
+  
+    porukaUspjeh.classList.add('hidden');
+});
+
+
+function validirajFormu() {
+    let validno = true;
+    
+   
+    if (ime.value.trim() === '') {
+        prikaziGresku(ime, 'Ime je obavezno polje.');
+        validno = false;
+    } else {
+        ukloniGresku(ime);
+    }
+    
+    
+    if (prezime.value.trim() === '') {
+        prikaziGresku(prezime, 'Prezime je obavezno polje.');
+        validno = false;
+    } else {
+        ukloniGresku(prezime);
+    }
+    
+    // 3. Provjera Email adrese (Prazno polje + Regex struktura)
     // // Ovaj dio koda je generisan/optimizovan uz pomoć AI asistenta.
 // 
 // TEHNIČKO OBJAŠNJENJE REGEX-A ZA ODBRANU PROJEKTA:
@@ -273,83 +291,82 @@ if (forma) {
 //    - [a-zA-Z0-9.-]+ provjerava domenu (npr. gmail, etf.unsa).
 //    - \.[a-zA-Z]{2,} provjerava TLD ekstenziju koja mora imati najmanje 2 slova (npr. .com, .ba).
 //
-        const emailVrijednost = email.value.trim();
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        
-        if (emailVrijednost === '') {
-            prikaziGresku(email, 'E-mail adresa je obavezna.');
-            validno = false;
-        } else if (!emailRegex.test(emailVrijednost)) {
-            prikaziGresku(email, 'Unesite ispravan format e-mail adrese (npr. ime@primjer.com).');
-            validno = false;
-        } else {
-            ukloniGresku(email);
-        }
-            // 4. Provjera Telefona (Prazno polje + Regex za cifre, razmake i crtice)
+
+    const emailVrijednost = email.value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (emailVrijednost === '') {
+        prikaziGresku(email, 'E-mail adresa je obavezna.');
+        validno = false;
+    } else if (!emailRegex.test(emailVrijednost)) {
+        prikaziGresku(email, 'Unesite ispravan format e-mail adrese (npr. ime@primjer.com).');
+        validno = false;
+    } else {
+        ukloniGresku(email);
+    }
+    
+    // 4. Provjera Telefona (Prazno polje + Regex za cifre, razmake i crtice)
     // telefonRegex:
 //    - /^[0-9\s\-]+$/ provjerava da li unos sadrži ISKLJUČIVO cifre ([0-9]), prazne razmake (\s) ili crtice (\-).
 //    - Znak + osigurava da string mora imati barem jedan karakter, a ne biti prazan.
-        const telefonVrijednost = telefon.value.trim();
-        const telefonRegex = /^[0-9\s\-]+$/;
-        
-        if (telefonVrijednost === '') {
-            prikaziGresku(telefon, 'Broj telefona je obavezan.');
-            validno = false;
-        } else if (!telefonRegex.test(telefonVrijednost)) {
-            prikaziGresku(telefon, 'Telefon može sadržavati samo cifre, razmake i crtice.');
-            validno = false;
-        } else {
-            ukloniGresku(telefon);
-        }
-        
-        if (tema.value === '') {
-            prikaziGresku(tema, 'Molimo odaberite temu vašeg upita.');
-            validno = false;
-        } else {
-            ukloniGresku(tema);
-        }
-        
-        const porukaVrijednost = poruka.value.trim();
-        if (porukaVrijednost === '') {
-            prikaziGresku(poruka, 'Tekst poruke ne može biti prazan.');
-            validno = false;
-        } else if (porukaVrijednost.length < 10) {
-            prikaziGresku(poruka, 'Poruka mora sadržavati minimalno 10 karaktera.');
-            validno = false;
-        } else {
-            ukloniGresku(poruka);
-        }
-        
-        return validno;
+    const telefonVrijednost = telefon.value.trim();
+    const telefonRegex = /^[0-9\s\-]+$/;
+    
+    if (telefonVrijednost === '') {
+        prikaziGresku(telefon, 'Broj telefona je obavezan.');
+        validno = false;
+    } else if (!telefonRegex.test(telefonVrijednost)) {
+        prikaziGresku(telefon, 'Telefon može sadržavati samo cifre, razmake i crtice.');
+        validno = false;
+    } else {
+        ukloniGresku(telefon);
     }
+    
+    
+    if (tema.value === '') {
+        prikaziGresku(tema, 'Molimo odaberite temu vašeg upita.');
+        validno = false;
+    } else {
+        ukloniGresku(tema);
+    }
+    
+    
+    const porukaVrijednost = poruka.value.trim();
+    if (porukaVrijednost === '') {
+        prikaziGresku(poruka, 'Tekst poruke ne može biti prazan.');
+        validno = false;
+    } else if (porukaVrijednost.length < 10) {
+        prikaziGresku(poruka, 'Poruka mora sadržavati minimalno 10 karaktera.');
+        validno = false;
+    } else {
+        ukloniGresku(poruka);
+    }
+    
+    return validno;
+}
 
-    function prikaziGresku(inputElement, tekstGreske) {
-        const kontejnerGrupa = inputElement.parentElement;
-        const greskaSpan = kontejnerGrupa.querySelector('.poruka-greske');
-        
-        kontejnerGrupa.classList.add('ima-gresku');
-        if (greskaSpan) {
-            greskaSpan.textContent = tekstGreske;
-        }
-    }
 
-    function ukloniGresku(inputElement) {
-        const kontejnerGrupa = inputElement.parentElement;
-        kontejnerGrupa.classList.remove('ima-gresku');
-        const greskaSpan = kontejnerGrupa.querySelector('.poruka-greske');
-        if (greskaSpan) {
-            greskaSpan.textContent = '';
-        }
-    }
 
-    function ocistiSveGreske() {
-        const sveGrupe = document.querySelectorAll('.forma-grupa');
-        sveGrupe.forEach(grupa => {
-            grupa.classList.remove('ima-gresku');
-            const greskaSpan = grupa.querySelector('.poruka-greske');
-            if (greskaSpan) {
-                greskaSpan.textContent = '';
-            }
-        });
-    }
+
+function prikaziGresku(inputElement, tekstGreske) {
+    const kontejnerGrupa = inputElement.parentElement;
+    const greskaSpan = kontejnerGrupa.querySelector('.poruka-greske');
+    
+    
+    kontejnerGrupa.classList.add('ima-gresku');
+    greskaSpan.textContent = tekstGreske;
+}
+
+
+function ukloniGresku(inputElement) {
+    const kontejnerGrupa = inputElement.parentElement;
+    kontejnerGrupa.classList.remove('ima-gresku');
+}
+
+
+function ocistiSveGreske() {
+    const sveGrupe = document.querySelectorAll('.forma-grupa');
+    sveGrupe.forEach(grupa => {
+        grupa.classList.remove('ima-gresku');
+    });
 }
