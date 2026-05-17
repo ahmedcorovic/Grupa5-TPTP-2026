@@ -3,65 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"> <!--Link za Google font-->
     <link rel="stylesheet" href="css/tptpstil.css">
     <script src="https://kit.fontawesome.com/5d24496098.js" crossorigin="anonymous"></script>
-    <title>EcoWatch - Ekološki potral</title>
+    <title>EcoWatch - Ekološki portal</title>
 </head>
 <body>
 
-
-
     <header>
-
         <img src="images/logo-light.svg" alt="EcoWatch logo">
         <!-- Logo generisan uz pomoc Claude AI-->
-     <nav>    
-        <li><a href="index.html" class="nav_links" >Početna</a></li>
-        <li><a href="sadrzaj.html" class="nav_links">Sadržaj</a></li>
-        <li><a href="kontakt.html" class="nav_links active">Kontakt</a></li>
-        <li><a href="https://github.com/ahmedcorovic/Grupa5-TPTP-2026.git" target="_blank" ><i class="fa-brands fa-github"></i></a></li>
-        <li><a href=""><i class="fa-regular fa-moon"></i></a></li> 
-     </nav>
+        <nav>    
+            <li><a href="index.html" class="nav_links">Početna</a></li>
+            <li><a href="sadrzaj.html" class="nav_links">Sadržaj</a></li>
+            <li><a href="kontakt.html" class="nav_links active">Kontakt</a></li>
+            <li><a href="https://github.com/ahmedcorovic/Grupa5-TPTP-2026.git" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#" id="toggle-mod"><i class="fa-regular fa-moon"></i></a></li> 
+        </nav>
     </header>
 
+    <main class="kontakt-glavni-sadrzaj">
+        <div class="kontakt-kontejner">
+            <div class="kontakt-zaglavlje">
+                <h2>Kontaktirajte Nas</h2>
+                <p>Imate pitanje, sugestiju ili želite preporučiti temu? Pišite nam putem forme ispod.</p>
+            </div>
 
+            <section class="kontakt-tim">
+    <h3>Naš tim za podršku</h3>
+    <div class="tim-kartice">
+        
+        <article class="kontakt-kartica">
+            <div class="avatar">
+                <img src="images/emsela.dz.png" alt="Emsela Džambić - Portret">
+            </div>
+            <h4>Emsela Džambić</h4>
+            <a href="mailto:emsela.dzambic@fet.ba">emsela.dzambic@fet.ba</a>
+        </article>
 
+        <article class="kontakt-kartica">
+            <div class="avatar">
+                <img src="images/ahmed.l.jpg" alt="Ahmed Lapandić - Portret">
+            </div>
+            <h4>Ahmed Lapandić</h4>
+            <a href="mailto:ahmed.lapandic@fet.ba">ahmed.lapandic@fet.ba</a>
+        </article>
 
+        <article class="kontakt-kartica">
+            <div class="avatar">
+                <img src="images/ahmed.c.jpg" alt="Ahmed Ćorović - Portret">
+            </div>
+            <h4>Ahmed Ćorović</h4>
+            <a href="mailto:ahmed.corovic@fet.ba">ahmed.ćorović@fet.ba</a>
+        </article>
+        
+    </div>
+</section>
 
+            <div id="poruka-uspjeh" class="kontakt-uspjeh hidden">
+                <div class="uspjeh-ikona">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 id="uspjeh-naslov">Hvala Vam!</h3>
+                <p id="uspjeh-tekst">Vaša poruka je uspješno poslana. Javit ćemo vam se u najkraćem mogućem roku.</p>
+            </div>
 
+            <form id="kontaktForma" class="kontakt-forma">
+                
+                <div class="forma-red">
+                    <div class="forma-grupa">
+                        <label for="ime">Ime</label>
+                        <input type="text" id="ime" name="ime" placeholder="Unesite vaše ime">
+                        <span class="poruka-greske" id="greska-ime"></span>
+                    </div>
+                    
+                    <div class="forma-grupa">
+                        <label for="prezime">Prezime</label>
+                        <input type="text" id="prezime" name="prezime" placeholder="Unesite vaše prezime">
+                        <span class="poruka-greske" id="greska-prezime"></span>
+                    </div>
+                </div>
 
+                <div class="forma-red">
+                    <div class="forma-grupa">
+                        <label for="email">E-mail adresa</label>
+                        <input type="email" id="email" name="email" placeholder="ime@primjer.com">
+                        <span class="poruka-greske" id="greska-email"></span>
+                    </div>
 
+                    <div class="forma-grupa">
+                        <label for="telefon">Broj telefona</label>
+                        <input type="text" id="telefon" name="telefon" placeholder="Npr. 061-123-456">
+                        <span class="poruka-greske" id="greska-telefon"></span>
+                    </div>
+                </div>
 
+                <div class="forma-grupa">
+                    <label for="tema">Tema upita</label>
+                    <select id="tema" name="tema">
+                        <option value="">-- Odaberite temu --</option>
+                        <option value="opsti-upit">Opšti upit / Pitanje</option>
+                        <option value="sugestija">Sugestija ili kritika</option>
+                        <option value="ekologija">Ekološki problemi i prijava</option>
+                        <option value="partnerstvo">Saradnja i partnerstvo</option>
+                    </select>
+                    <span class="poruka-greske" id="greska-tema"></span>
+                </div>
 
+                <div class="forma-grupa">
+                    <label for="poruka">Vaša poruka</label>
+                    <textarea id="poruka" name="poruka" rows="6" placeholder="Napišite vašu poruku ovdje..."></textarea>
+                    <span class="poruka-greske" id="greska-poruka"></span>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <div class="forma-dugmad">
+                    <button type="submit" class="btn-posalji">Pošalji poruku</button>
+                    <button type="button" id="btnReset" class="btn-resetuj">Resetuj formu</button>
+                </div>
+            </form>
+        </div>
+    </main>
 
     <footer>
         <p>
-           © 2026 EcoWatch | Grupa 5- Emsela Džambić, Ahmed Lapandić, Ahmed Ćorović 
+            © 2026 EcoWatch | Grupa 5 - Emsela Džambić, Ahmed Lapandić, Ahmed Ćorović 
         </p>
-        <p>
-            <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/ahmedcorovic/Grupa5-TPTP-2026.git" target="_blank"><i class="fa-brands fa-github"></i></a>
     </footer>
 
-
-
-
-    
+    <script src="js/tptpskripte.js"></script>
+        
 </body>
 </html>
