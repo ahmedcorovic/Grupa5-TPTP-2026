@@ -473,18 +473,7 @@ padding: 0px 15px;
     font-size: 15px;
     margin-bottom: 20px;
 }
-/*SADRZAJ*/
-/* Stilovi za kalkulator ekološkog otiska */
-body{
-    background: var(--pozadina-stranice) !important;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    color: var(--boja-tekst-glavni);
-    transition: background 0.3s ease, color 0.3s ease;
-}
+
 
 
 @media (min-width:1025px) and (max-width:1440px){
@@ -1015,8 +1004,18 @@ main{
   
 }
 
-
-
+/*SADRZAJ*/
+/* Stilovi za kalkulator ekološkog otiska */
+body{
+    background: var(--pozadina-stranice) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--boja-tekst-glavni);
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
 
 /* Stilovi za Kalkulator ekološkog otiska */
