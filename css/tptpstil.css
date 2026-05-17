@@ -1699,28 +1699,29 @@ input, textarea, select, button {
 }
 
 
+/* --- STILOVI ZA VALIDACIJU FORME (Kada polje ima grešku) --- */
+
+
 .forma-grupa.ima-gresku input,
-.forma-grupa.ima-gresku select,
-.forma-grupa.ima-gresku textarea {
-    border-color: #e53935 !important;
-    background-color: rgba(229, 57, 53, 0.02);
+.forma-grupa.ima-gresku textarea,
+.forma-grupa.ima-gresku select {
+    border: 2px solid #ff4d4d !important;      
+    background-color: #fff5f5 !important;   
+    outline: none;
 }
+
 
 .forma-grupa.ima-gresku label {
-    color: #e53935;
+    color: #d32f2f;
 }
 
-.poruka-greske {
-    color: #e53935;
-    font-size: 13px;
-    margin-top: 6px;
-    font-weight: 500;
-    display: none; /* Sakriveno dok nema greške */
-}
 
-/* Kada grupa ima klasu .ima-gresku, prikaži tekst pored polja */
 .forma-grupa.ima-gresku .poruka-greske {
-    display: block;
+    color: #ff4d4d;
+    display: block;       
+    font-size: 0.85rem;   
+    margin-top: 5px;      
+    font-weight: 600;     
 }
 
 /* Dugmad */
