@@ -474,6 +474,10 @@ body {
     font-family: sans-serif; 
 }
 
+.globalni-kod-ikona {
+    margin-right: 10px;
+    color: #2e7d32;
+}
 /*stil brojaca*/
 .live-tree-counter {
     max-width: 400px;
