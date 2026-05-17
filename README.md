@@ -1,16 +1,22 @@
-#EcoWatch - Ekološki Portal
 
-# Grupa5-TPTP-2026
-## Članovi tima (Grupa 5)
-Ahmed Ćorović
-Ahmed Lapandić
-Emsela Džambić
+# EcoWatch - Ekološki Portal
 
-EcoWatch je responzivni web portal posvećen podizanju svesti o očuvanju životne sredine, praćenju ekoloških indikatora i edukaciji korisnika. Projekat je rađen kao timski rad u sklopu predmeta Tehnologije za podršku tehničkom pisanju.
+## O projektu
+EcoWatch je web portal posvećen informisanju o ekološkom stanju planete sa fokusom na Bosnu i Hercegovinu. Stranica prikazuje aktualne ekološke teme, omogućava filtriranje sadržaja po kategorijama i sadrži kalkulator ekološkog otiska. 
 
-##DOKUMENTACIJA AI UPOTREBE
-U skladu sa zahtevima projekta, tokom razvoja portala EcoWatch korišćeni su AI asistenti (ChatGPT / Gemini) kao podrška u učenju, otklanjanju grešaka (debugging) i optimizaciji koda.
-**JavaScript logika:** AI nam je pomogao da postavimo logiku za simulaciju brojača stabala uživo (pomoću `setInterval` funkcije) i formulu za kalkulator karbonskog otiska.
-
+## Članovi grupe
+| Ime i prezime | GitHub              | Zaduzenje                            |
+|---------------|---------------------|--------------------------------------|
+| Ahmed Ćorović | @ahmedcorovic       | index.html HTML + CSS+ JavaScript    |
+| Emsela Džambić| @emseladzambic-hash | sadrzaj.html HTML + CSS + JavaScript |
+| Ahmed Lapandić| @ahmed-lapandic     | kontakt.html HTML + CSS + JavaScript |
+## Tehnologije
+- HTML5
+- CSS3 (bez frameworka)
+- JavaScript (bez biblioteka)
+## AI alati koristeni u projektu
+- Claude: Generisanje logotipa stranice
+## Napomene
+Sve slike su preuzete sa Google pretraživača. U određenim segmentima koda je naznačena upotreba umjetne inteligencije. 
 
 
