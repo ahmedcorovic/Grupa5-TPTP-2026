@@ -12,11 +12,10 @@ font-family: 'Inter', sans-serif;
     --boja-cont:#e0f8e2;
     --boja-kartice:#ffffff;
     --boja-naslovi:#5a7a5d;
-<<<<<<< HEAD
     --boja-footer:#1a2e1c;
     --boja-ftekst:#d4e8d0;
     --boja-zelena:#2a7a36;
-=======
+
     --boja-footer: #1a2e1c;
     --boja-ftekst: #d4e8d0;
 
@@ -36,7 +35,7 @@ font-family: 'Inter', sans-serif;
 
     --pozadina-stranice: linear-gradient(180deg, #effce9 0%, #ffffff 100%);
     
->>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
+
 }
 body.tamni-mod {
   --boja-tekst:#e8f5e4;
@@ -45,11 +44,9 @@ body.tamni-mod {
   --boja-cont:#0a1a0c;
   --boja-kartice:#162b19;
   --boja-naslovi:#9eb89a;
-<<<<<<< HEAD
   --boja-footer:#2a4a2e;
   --boja-ftekst:#e8f5e4;
   --boja-zelena:#7dcc55;
-=======
   --boja-footer: #2a4a2e;
   --boja-ftekst: #e8f5e4;
 
@@ -69,7 +66,7 @@ body.tamni-mod {
 
     --pozadina-stranice: linear-gradient(180deg, #132416 0%, #050805 100%);
     
->>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
+
 }
 /* TAMNI MOD DRUGI NACIN, UGASEN ZBOG POSTOJANJA JAVASCRIPTE KOJA RADI ISTO
    @media (prefers-color-scheme: dark) {
@@ -489,7 +486,7 @@ body{
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-<<<<<<< HEAD
+
 @media (min-width:1025px) and (max-width:1440px){
  
 
@@ -1023,8 +1020,7 @@ main{
 
 
 /* Stilovi za Kalkulator ekološkog otiska */
-=======
->>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
+
 .calculator-section {
     max-width: 650px;
     margin: 40px;
