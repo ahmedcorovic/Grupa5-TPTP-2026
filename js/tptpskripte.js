@@ -63,6 +63,11 @@ function toggleAccordion(headerElement) {
 }
 
 //brojac stabala//
+/* Napomena o AI upotrebi: 
+   Sledeća funkcija za simulaciju brojača kreirana je uz pomoć AI asistenta 
+   kako bi se postiglo optimalno osvežavanje ekrana na svakih 2.5 sekunde.
+*/
+
 document.addEventListener("DOMContentLoaded", function() {
     let brojStabala = 0;
     const brojacElement = document.getElementById("brojac-stabala");
