@@ -100,11 +100,6 @@ function promijeniČinjenicu() {
 }
 
 
-
-
-
-
-
 // FILTRIRANJE KARTICA//
 document.addEventListener("DOMContentLoaded", function(){
     const filterButtons = document.querySelectorAll(".filter-btn");
