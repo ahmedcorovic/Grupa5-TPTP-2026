@@ -1534,3 +1534,293 @@ body{
 
 }
 /*.*/
+
+/*stil za kontakt formu*/
+body, header, main, footer, .kontakt-kontejner, .kontakt-tim, .kontakt-kartica,
+input, textarea, select, button {
+    transition: background 0.5s ease, background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.kontakt-tim {
+    margin: 25px 0 10px;
+    padding: 20px;
+    background-color: var(--boja-cont);
+    border: 1px solid var(--boja-border);
+    border-radius: 18px;
+}
+
+.kontakt-tim h3 {
+    font-size: 24px;
+    color: var(--boja-naslovi);
+    margin-bottom: 18px;
+}
+
+.tim-kartice {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.kontakt-kartica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--boja-kartice);
+    border: 1px solid var(--boja-border);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kontakt-kartica:hover {
+    transform: translateY(-4px);
+}
+
+.kontakt-kartica .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--boja-cont);
+    border: 1px solid var(--boja-border);
+    color: var(--boja-tekst);
+    font-size: 32px;
+    overflow: hidden; 
+}
+
+.kontakt-kartica .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.kontakt-kartica h4 {
+    font-size: 18px;
+    color: var(--boja-tekst);
+}
+
+.kontakt-kartica .kontakt-rol {
+    font-size: 14px;
+    color: var(--boja-naslovi);
+}
+
+.kontakt-kartica a {
+    color: #2a7a36;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.kontakt-kartica a:hover {
+    text-decoration: underline;
+}
+
+.kontakt-glavni-sadrzaj {
+    display: block;
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    padding: 60px 20px;
+}
+
+.kontakt-kontejner {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--boja-kartice);
+    border: 1.5px solid var(--boja-border);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.kontakt-zaglavlje {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.kontakt-zaglavlje h2 {
+    color: var(--boja-naslovi);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.kontakt-zaglavlje p {
+    color: var(--boja-tekst);
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+
+.forma-red {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+.forma-red .forma-grupa {
+    flex: 1;
+}
+
+.forma-grupa {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma-grupa label {
+    font-weight: 600;
+    color: var(--boja-tekst);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.forma-grupa input,
+.forma-grupa select,
+.forma-grupa textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--boja-border);
+    background-color: var(--boja-kartice);
+    color: var(--boja-tekst);
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.forma-grupa input:focus,
+.forma-grupa select:focus,
+.forma-grupa textarea:focus {
+    border-color: var(--boja-naslovi);
+    box-shadow: 0 0 0 3px var(--boja-cont);
+}
+
+
+.forma-grupa.ima-gresku input,
+.forma-grupa.ima-gresku select,
+.forma-grupa.ima-gresku textarea {
+    border-color: #e53935 !important;
+    background-color: rgba(229, 57, 53, 0.02);
+}
+
+.forma-grupa.ima-gresku label {
+    color: #e53935;
+}
+
+.poruka-greske {
+    color: #e53935;
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: 500;
+    display: none; /* Sakriveno dok nema greške */
+}
+
+/* Kada grupa ima klasu .ima-gresku, prikaži tekst pored polja */
+.forma-grupa.ima-gresku .poruka-greske {
+    display: block;
+}
+
+/* Dugmad */
+.forma-dugmad {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-posalji {
+    flex: 2;
+    padding: 14px;
+    background-color: var(--boja-naslovi);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-posalji:hover {
+    background-color: #466048;
+}
+
+.btn-posalji:active {
+    transform: scale(0.98);
+}
+
+.btn-resetuj {
+    flex: 1;
+    padding: 14px;
+    background-color: transparent;
+    color: var(--boja-tekst);
+    border: 2px solid var(--boja-border);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-resetuj:hover {
+    background-color: var(--boja-cont);
+    border-color: var(--boja-naslovi);
+}
+
+/* Stilovi za personalizovanu poruku o uspjehu */
+.kontakt-uspjeh {
+    background-color: var(--boja-cont);
+    border: 2px solid var(--boja-naslovi);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: unutraFade 0.5s ease;
+}
+
+.uspjeh-ikona {
+    font-size: 45px;
+    color: var(--boja-naslovi);
+    margin-bottom: 10px;
+}
+
+#uspjeh-naslov {
+    font-size: 22px;
+    color: var(--boja-tekst);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#uspjeh-tekst {
+    color: var(--boja-tekst);
+    font-size: 15px;
+}
+
+@keyframes unutraFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+footer{
+    padding: 10px 60px ;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--boja-footer);
+    height: 60px;
+    color:  var(--boja-ftekst);
+    margin-top: auto;
+}
+
+footer a{
+    font-size: 20px;
+    color: var(--boja-ftekst);
+}
+
+footer p{
+    font-size: 16px;
+    color: var(--boja-ftekst) !important;
+}
