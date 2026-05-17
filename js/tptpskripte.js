@@ -99,11 +99,6 @@ function promijeniČinjenicu() {
     tekstElement.textContent = cinjenice[mojTrenutniIndeks];
 }
 
-
-<<<<<<< HEAD
-
-
-
 //SAT//
 const DANI    = ['Nedjelja','Ponedjeljak','Utorak','Srijeda','Četvrtak','Petak','Subota'];
 const MJESECI = ['januar','februar','mart','april','maj','jun',
@@ -146,8 +141,6 @@ nav.querySelectorAll('a').forEach(link => {
 
 
 
-=======
->>>>>>> 62778a3f5f6415c04fd6a59b7bc95174484008e8
 // FILTRIRANJE KARTICA//
 document.addEventListener("DOMContentLoaded", function(){
     const filterButtons = document.querySelectorAll(".filter-btn");
