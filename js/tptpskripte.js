@@ -99,6 +99,35 @@ function promijeniČinjenicu() {
     tekstElement.textContent = cinjenice[mojTrenutniIndeks];
 }
 
+//TAMNI MOD//
+const toggleMod = document.getElementById('toggle-mod');
+const logo = document.querySelector('header img');  
+
+toggleMod.addEventListener('click', () => {
+    document.body.classList.toggle('tamni-mod');
+
+    const tamniMod = document.body.classList.contains('tamni-mod');
+
+    
+    toggleMod.innerHTML = tamniMod 
+        ? '<i class="fa-regular fa-sun"></i>' 
+        : '<i class="fa-regular fa-moon"></i>';
+
+  
+    logo.src = tamniMod 
+        ? 'images/logo-dark.svg' 
+        : 'images/logo-light.svg';
+
+    localStorage.setItem('mod', tamniMod ? 'tamni' : 'svjetli');
+});
+
+//LOCAL STORAGE//
+if (localStorage.getItem('mod') === 'tamni') {
+    document.body.classList.add('tamni-mod');
+    toggleMod.innerHTML = '<i class="fa-regular fa-sun"></i>';
+    logo.src = 'images/logo-dark.svg';  
+}
+
 //SAT//
 const DANI    = ['Nedjelja','Ponedjeljak','Utorak','Srijeda','Četvrtak','Petak','Subota'];
 const MJESECI = ['januar','februar','mart','april','maj','jun',
@@ -174,34 +203,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 
-//TAMNI MOD//
-const toggleMod = document.getElementById('toggle-mod');
-const logo = document.querySelector('header img');  
 
-toggleMod.addEventListener('click', () => {
-    document.body.classList.toggle('tamni-mod');
-
-    const tamniMod = document.body.classList.contains('tamni-mod');
-
-    
-    toggleMod.innerHTML = tamniMod 
-        ? '<i class="fa-regular fa-sun"></i>' 
-        : '<i class="fa-regular fa-moon"></i>';
-
-  
-    logo.src = tamniMod 
-        ? 'images/logo-dark.svg' 
-        : 'images/logo-light.svg';
-
-    localStorage.setItem('mod', tamniMod ? 'tamni' : 'svjetli');
-});
-
-//LOCAL STORAGE//
-if (localStorage.getItem('mod') === 'tamni') {
-    document.body.classList.add('tamni-mod');
-    toggleMod.innerHTML = '<i class="fa-regular fa-sun"></i>';
-    logo.src = 'images/logo-dark.svg';  
-}
 
 //DUGME ZA POVRATAK NA VRH//
 const nazadBtn = document.querySelector('.nazad');
