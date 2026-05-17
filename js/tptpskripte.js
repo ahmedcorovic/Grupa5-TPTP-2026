@@ -98,6 +98,46 @@ function promijeniČinjenicu() {
 
 
 
+//SAT//
+const DANI    = ['Nedjelja','Ponedjeljak','Utorak','Srijeda','Četvrtak','Petak','Subota'];
+const MJESECI = ['januar','februar','mart','april','maj','jun',
+                 'jul','august','septembar','oktobar','novembar','decembar'];
+
+function azurirajSat() {
+  const sad    = new Date();
+  const sati   = String(sad.getHours()).padStart(2, '0');
+  const minute = String(sad.getMinutes()).padStart(2, '0');
+  const sek    = String(sad.getSeconds()).padStart(2, '0');
+  const datum  = `${DANI[sad.getDay()]}, ${sad.getDate()}. ${MJESECI[sad.getMonth()]} ${sad.getFullYear()}.`;
+
+  document.getElementById('sati').textContent = sati;
+  document.getElementById('minute').textContent = minute;
+  document.getElementById('sekunde').textContent = sek;
+  document.getElementById('sat-datum').textContent = datum;
+}
+azurirajSat();
+
+setInterval(azurirajSat, 1000);
+
+
+//BURGER MENI//
+
+const burger = document.getElementById('burger');
+const nav    = document.getElementById('glavna-nav');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('otvoren');  
+    nav.classList.toggle('otvoren');     
+});
+
+
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('otvoren');
+        nav.classList.remove('otvoren');
+    });
+});
+
 
 
 // FILTRIRANJE KARTICA//
@@ -161,8 +201,10 @@ if (localStorage.getItem('mod') === 'tamni') {
     toggleMod.innerHTML = '<i class="fa-regular fa-sun"></i>';
     logo.src = 'images/logo-dark.svg';  
 }
-   
 
+//DUGME ZA POVRATAK NA VRH//
+const nazadBtn = document.querySelector('.nazad');
 
-
-
+nazadBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

@@ -9,13 +9,19 @@
     <title>EcoWatch - Ekološki potral</title>
 </head>
 <body>
-
-
-
+ 
     <header>
         <img src="images/logo-light.svg" alt="EcoWatch logo">
         <!-- Logo generisan uz pomoc Claude AI-->
-       <nav>
+
+<button class="burger" id="burger" aria-label="Otvori meni">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+       <nav id="glavna-nav">
         <li><a href="" class="nav_links active" >Početna</a></li>
         <li><a href="sadrzaj.html" class="nav_links">Sadržaj</a></li>
         <li><a href="kontakt.html" class="nav_links">Kontakt</a></li>
@@ -24,13 +30,28 @@
       </nav>
 
     </header>
-
+ 
     <section class="landing_page">
+    <div class="landing_wrapper">
         <div class="landing_content">
             <p class="p1">  🌎 Ekološki portal - 2026</p>
            <h1> Stanje naše  <em style="font-style: normal; color: #2a7a36;">planete</em> u realnom vremenu</h1>
            <p class="p2">Pratite ekološke indikatore, saznajte svoj ekološki otisak i doprinesite promjeni.</p>
         </div>
+        <div class="sat-widget">
+             <div class="sat-naslov">
+                  <span class="sat-tacka"></span>
+                Trenutno vrijeme
+             </div>
+             <div class="sat-vrijeme">
+                <span id="sati">00</span><span class="sat-separator">:</span><span id="minute">00</span><span class="sat-separator sat-sekunde">:</span><span class="sat-sekunde" id="sekunde">00</span>
+                </div>
+             <div class="sat-datum" id="sat-datum">—</div>
+         </div>
+    </div>
+  
+
+    
 
         <dl class="statistika">
             <div class="stat_item">
@@ -203,6 +224,7 @@
                 </div>
           </article>
         </div>
+        <button class="nazad">Nazad na vrh</button>
     </section>
 
     <aside class="video">
